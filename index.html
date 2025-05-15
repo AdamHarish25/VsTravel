@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VS Travel - Berpergian Kemana Aja Kamu Mau</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="heroHead">
+        <header>
+            <img src="./asset/Logo.png" alt="Logo" class="logo" />
+
+            <!-- Desktop / Tablet Navbar -->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./Pages/Destinasi/index.html">Destinasi</a></li>
+                    <li><a href="./Pages/TravelNow/index.html">Travel Now</a></li>
+                    <li><a href="./Pages/Kontak/index.html">Kontak Kami</a></li>
+                    <li><a href="./Pages/Tentang/index.html">Tentang</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="open-sidebar-btn" onclick="openSidebar()">☰</button>
+        </header>
+
+        <!-- Sidebar for Mobile -->
+        <!-- Sidebar (mobile only) -->
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+            <a id="sideButton1" href="#">Beranda</a>
+            <a id="sideButton2" href="./Pages/Destinasi/index.html">Destinasi</a>
+            <a id="sideButton3" href="./Pages/TravelNow/index.html">Travel Now</a>
+            <a id="sideButton4" href="./Pages/Kontak/index.html">Kontak Kami</a>
+            <a id="sideButton5" href="./Pages/Tentang/index.html">Tentang</a>
+        </div>
+        <main>
+            <section class="hero">
+                <h1>Berpergian Kemana Aja Kamu Mau</h1>
+                <div class="paragraf">
+                    <p>
+                        Dipercaya oleh <b>100k+ Traveller</b> di penjuru Indonesia, VS Travel
+                        membuat kunjunganmu semakin <em>Nyaman & Aman</em>. Menyediakan
+                        mulai dari Jadwal Penerbangan hingga Destinasi Tujuan.
+                    </p>
+                </div>
+                <div class="search-box">
+                    <input type="text" class="tujuan" placeholder="📍 Cari tempat tujuan mu disini...." />
+                    <hr>
+                    <input type="text" class="tanggal" placeholder="| DD/MM/YYYY" />
+                    <hr>
+                    <input type="number" class="anggota" placeholder="| Jumlah anggota" />
+                    <hr>
+                    <button>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="guide">
+        <div class="guideHead">
+            <h1>Panduan Liburan Anda Nanti</h1>
+            <p>Cek Destinasi Liburan terbaik minggu ini yang mungkin kamu suka</p>
+        </div>
+
+        <div class="selectionButton">
+            <button class="active">All</button>
+            <button>Trending</button>
+            <button>Popular</button>
+            <button>Recommend</button>
+            <!-- <button>Tour Packs</button> -->
+        </div>
+
+        <div class="destination-grid">
+            <div class="destination-card" data-category="Trending">
+                <img src="asset/bali.jpg" alt="Bali" />
+                <div class="info">
+                    <h3>Bali, ID - Rp.400k</h3>
+                    <hr>
+                    <p>Bali, tempat dimana keunikan selalu menonjol dimata orang” Lokal maupun International.</p>
+                </div>
+            </div>
+            <div class="destination-card" data-category="Popular,Recommend">
+                <img src="asset/hawaii.jpg" alt="Hawaii" />
+                <div class="info">
+                    <h3>Hawaii, US - Rp.200k</h3>
+                    <hr>
+                    <p>Tempat favorit semua orang, dimana Adat lokal disana unik & pemandangan yg sangat apik!</p>
+                </div>
+            </div>
+            <div class="destination-card" data-category="Recommend">
+                <img src="asset/padang.png" alt="Padang" />
+                <div class="info">
+                    <h3>Padang, ID - Rp.600k</h3>
+                    <hr>
+                    <p>Padang, tempat dimana makanan khas Terenak berasal & Tempat Turisme yg sangat Indah.</p>
+                </div>
+            </div>
+            <div class="destination-card" data-category="Recommend,Trending">
+                <img src="asset/lombok.jpg" alt="Lombok" />
+                <div class="info">
+                    <h3>Lombok, ID - Rp.500k</h3>
+                    <hr>
+                    <p>Lombok, dimana Sirkuit Mandalika terletak & Pantai terindah berada.</p>
+                </div>
+            </div>
+            <div class="destination-card" data-category="Trending,Popular">
+                <img src="asset/raja_ampat.jpg" alt="Raja Ampat" />
+                <div class="info">
+                    <h3>Raja Ampat, ID - Rp.1000k</h3>
+                    <hr>
+                    <p>Destinasi paling apik dengan pemandangan yang Indah, cocok sekali bagi anda yg ingin healing!</p>
+                </div>
+            </div>
+            <div class="destination-card" data-category="Popular,Trending">
+                <img src="asset/borneo.jpg" alt="Borneo" />
+                <div class="info">
+                    <h3>Borneo, ID - Rp.1200k</h3>
+                    <hr>
+                    <p>Tempat dimana seluruh satwa terlindungi berada, cocok utk Photo Hunting Satwa langka!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="pagination" id="pagination"></div> -->
+    </div>
+
+    <div class="grid-cols-2">
+        <div class="cardImage">
+            <img src="./asset/info1.webp" alt="">
+        </div>
+
+        <div class="cardDescription">
+            <h1>
+                List Destinasi yang gampang di Akses
+            </h1>
+
+            <p>
+                Akses yang telah dirancang sedemikian rupa supaya dapat memudahkan user untuk memakai nya dalam jangka
+                lama.
+            </p>
+
+            <a href="#" class="cardButton">Selengkapnya</a>
+        </div>
+    </div>
+
+    <div class="grid-cols-2">
+        <div class="cardDescription">
+            <h1>
+                Pemberitahuan Harga Tiket
+            </h1>
+
+            <p>
+                Notifikasi secara Instan, yang dimana kamu akan nantikan dengan budget yg kamu tentukan!
+            </p>
+
+            <a href="#" class="cardButton">Temukan Disini</a>
+        </div>
+
+        <div class="cardImage">
+            <img src="./asset/info2.webp" alt="">
+        </div>
+    </div>
+
+    <div class="grid-cols-2">
+        <div class="cardImage">
+            <img src="./asset/info3.webp" alt="">
+        </div>
+
+        <div class="cardDescription">
+            <h1>
+                Pengisian Detail Penumpang Cepat!
+            </h1>
+
+            <p>
+                Isi detail penumpang sekarang, pilih detail mu dengan cepat di pengisian selanjutnya!
+            </p>
+
+            <a href="#" class="cardButton">Cek sekarang!</a>
+        </div>
+    </div>
+
+    <div class="grid-cols-2">
+        <div class="cardDescription">
+            <h1>
+                Penggantian Jadwal yang Gampang
+            </h1>
+
+            <p>
+                Tidak perlu lagi buru-buru ke bandara! Ubah jadwal penerbangan hanya dalam beberapa klik. Reschedule
+                jadi lebih mudah dan hemat waktu. Buka E-Tiket di Travel Now dan atur ulang penerbangan Anda dengan
+                praktis!
+            </p>
+
+            <a href="#" class="cardButton">Selengkapnya</a>
+        </div>
+
+        <div class="cardImage">
+            <img src="./asset/info4.webp" alt="">
+        </div>
+    </div>
+    <div class="grid-cols-2">
+        <div class="cardImage">
+            <img src="./asset/info5.webp" alt="">
+        </div>
+
+        <div class="cardDescription">
+            <h1>
+                Tetap Tergaransi
+            </h1>
+
+            <p>
+                Kelupaan Password, Kegiatan mendadak atau Akun dihack? Tenang kami telah Garansi Tiket pesanan anda dan
+                automatis tiket anda yang tidak bisa terpakai karena Accidental tsb akan kami reimburse* sebanyak 100% !
+            </p>
+
+            <a href="#" class="cardButton">Selengkapnya</a>
+        </div>
+    </div>
+
+    <div class="prioritas">
+
+        <div class="testimoni-header">
+            <button>
+                <img src="./asset/left.png" />
+            </button>
+            <h2>Customer Happy Prioritas Kami</h2>
+            <button>
+                <img src="./asset/right.png" />
+            </button>
+        </div>
+
+        <div class="testimoni-container">
+            <!-- Testimoni 1 -->
+            <div class="card">
+                <div class="profile">
+                    <img src="./asset/avatar/bayuPraz.jpg" alt="Bayu">
+                    <div class="profile-info">
+                        <span class="name">Bayu Praz Manan</span>
+                        <span class="title">Vlogger sejati</span>
+                    </div>
+                </div>
+                <div class="rating">4.5</div>
+                <p class="desc">
+                    Pakai VSTravel benar² Gampang cuyy, tinggal klik-klik-klik selesai dah booking, langsung shoosh ke
+                    Jepang ya gak ya wkwk, Terbaik dahh pokoknyaa! ✈️🎉
+                </p>
+            </div>
+
+            <!-- Testimoni 2 -->
+            <div class="card">
+                <div class="profile">
+                    <img src="./asset/avatar/Agus.jpg" alt="Agus">
+                    <div class="profile-info">
+                        <span class="name">Agus Diponogoro</span>
+                        <span class="title">Traveller sejati</span>
+                    </div>
+                </div>
+                <div class="rating">4.0</div>
+                <p class="desc">
+                    Dulu suka bingung kalau mau pesan tiket pesawat, tapi sejak kenal VSTravel, semuanya jadi super
+                    praktis! Tinggal klik-klik aja, booking langsung selesai. Udah gitu prosesnya cepet banget lagi!
+                    Bener-bener recommended! 🎉✈️
+                </p>
+            </div>
+
+            <!-- Testimoni 3 -->
+            <div class="card">
+                <div class="profile">
+                    <img src="./asset/avatar/missBule.jpg" alt="Miss Bule">
+                    <div class="profile-info">
+                        <span class="name">Miss Bule</span>
+                        <span class="title">Youtuber</span>
+                    </div>
+                </div>
+                <div class="rating">4.9</div>
+                <p class="desc">
+                    Pertama kali coba VSTravel dan langsung jatuh cinta! Proses bookingnya super gampang, tinggal
+                    klik-klik doang, gak pake ribet! Udah gitu cepet banget, langsung dapet tiketnya! Pokoknya top
+                    banget buat yang suka jalan-jalan! 🎊🎉
+                </p>
+            </div>
+
+            <!-- Testimoni 4 -->
+            <div class="card">
+                <div class="profile">
+                    <img src="./asset/avatar/nikkei.jpg" alt="Nikkei">
+                    <div class="profile-info">
+                        <span class="name">Nikkei Lim</span>
+                        <span class="title">Penyanyi Global</span>
+                    </div>
+                </div>
+                <div class="rating">4.3</div>
+                <p class="desc">
+                    Tur dunia itu seru, tapi urusan tiket bisa jadi PR besar kalau nggak pakai yang praktis. Untung ada
+                    VSTravel! Booking tiketnya gampang banget, tinggal klik-klik, langsung terbang. Bener-bener
+                    lifesaver buat musisi yang sibuk kayak aku! 🎤✈️
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+        <div class="upper">
+            <div class="logoDesc">
+                <img src="./asset/Logo.png" class="logo" />
+
+                <p>
+                    Kenyamanan & Keamanan adalah Prioritas Kami yg kami sediakan hanya untuk anda.
+                </p>
+            </div>
+
+            <div class="footMenu">
+                <div>
+                    <h2>Tentang</h2>
+                    <ul>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Kontak Kami</a></li>
+                        <li><a href="">Cara Booking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Produk</h2>
+                    <ul>
+                        <li><a href="">Destinasi</a></li>
+                        <li><a href="">Jadwal Terbang</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Social</h2>
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="bottom">
+            <a href="">Privacy Policy</a>
+            <p>Copyright ⓒ 2024 VsTravel</p>
+        </div>
+    </div>
+
+
+    <script>
+
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("sideButton1").style.opacity = "100%";
+            document.getElementById("sideButton2").style.opacity = "100%";
+            document.getElementById("sideButton3").style.opacity = "100%";
+            document.getElementById("sideButton4").style.opacity = "100%";
+            document.getElementById("sideButton5").style.opacity = "100%";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("sideButton1").style.opacity = "0";
+            document.getElementById("sideButton2").style.opacity = "0";
+            document.getElementById("sideButton3").style.opacity = "0";
+            document.getElementById("sideButton4").style.opacity = "0";
+            document.getElementById("sideButton5").style.opacity = "0";
+        }
+
+        const cardsPerPage = 6;
+        let currentPage = 1;
+        let activeCategory = 'All';
+
+        const allCards = Array.from(document.querySelectorAll('.destination-card'));
+        // const paginationContainer = document.getElementById('pagination');
+        const filterButtons = document.querySelectorAll('.selectionButton button');
+
+        function getFilteredCards() {
+            if (activeCategory === 'All') return allCards;
+            return allCards.filter(card => {
+                const categories = card.dataset.category.split(',').map(cat => cat.trim());
+                return categories.includes(activeCategory);
+            });
+        }
+
+        function showPage(page) {
+            const filteredCards = getFilteredCards();
+            const start = (page - 1) * cardsPerPage;
+            const end = start + cardsPerPage;
+
+            allCards.forEach(card => card.style.display = 'none');
+            filteredCards.slice(start, end).forEach(card => card.style.display = 'block');
+
+            // updatePagination(page, filteredCards.length);
+        }
+
+        // Untuk Pagination
+
+        // function updatePagination(activePage, totalItems) {
+        //     const pageCount = Math.ceil(totalItems / cardsPerPage);
+        //     paginationContainer.innerHTML = '';
+
+        //     const createButton = (text, page, isActive = false) => {
+        //         const btn = document.createElement('button');
+        //         btn.textContent = text;
+        //         if (isActive) btn.classList.add('active');
+        //         btn.addEventListener('click', () => {
+        //             currentPage = page;
+        //             showPage(currentPage);
+        //         });
+        //         return btn;
+        //     };
+
+        //     if (activePage > 1) {
+        //         paginationContainer.appendChild(createButton('« Prev', activePage - 1));
+        //     }
+
+        //     for (let i = 1; i <= pageCount; i++) {
+        //         paginationContainer.appendChild(createButton(i, i, i === activePage));
+        //     }
+
+        //     if (activePage < pageCount) {
+        //         paginationContainer.appendChild(createButton('Next »', activePage + 1));
+        //     }
+        // }
+
+        // Utk filtering bekerja
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                activeCategory = button.textContent;
+                currentPage = 1;
+                showPage(currentPage);
+            });
+        });
+
+        // Initial load
+        showPage(currentPage);
+    </script>
+
+
+</body>
+
+</html>

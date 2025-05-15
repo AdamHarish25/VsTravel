@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Destinasi yang kamu inginkan</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="../../asset/Logo.png" alt="Logo" class="logo" />
+
+        <!-- Desktop / Tablet Navbar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="../../index.html">Beranda</a></li>
+                <li><a href="#">Travel Now</a></li>
+                <li><a href="#">Kontak Kami</a></li>
+                <li><a href="#">Tentang</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="open-sidebar-btn" onclick="openSidebar()">☰</button>
+    </header>
+
+    <!-- Sidebar for Mobile -->
+    <!-- Sidebar (mobile only) -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+        <a id="sideButton1" href="../../index.html">Beranda</a>
+        <a id="sideButton2" href="#">Destinasi</a>
+        <a id="sideButton3" href="#">Travel Now</a>
+        <a id="sideButton4" href="#">Kontak Kami</a>
+        <a id="sideButton5" href="#">Tentang</a>
+    </div>
+
+    <div class="guide">
+
+        <div class="guideHead">
+            <h1>Kumpulan Destinasi Liburan Anda Disini!</h1>
+            <p>Cek Destinasi Liburan terbaik minggu ini yang mungkin kamu suka</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" class="tujuan" placeholder="📍 Cari tempat tujuan mu disini...." />
+            <hr>
+            <button>
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                    viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                        d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
+                </svg>
+            </button>
+        </div>
+
+
+        <div class="selectionButton">
+            <button class="active">All</button>
+            <button>Trending</button>
+            <button>Popular</button>
+            <button>Recommend</button>
+            <!-- <button>Tour Packs</button> -->
+        </div>
+
+        <div class="destination-grid">
+            <div class="destination-card" data-category="Trending">
+                <img src="../../asset/bali.jpg" alt="Bali" />
+                <div class="info">
+                    <h3>Bali, ID - Rp.400k</h3>
+                    <hr>
+                    <p>Bali, tempat dimana keunikan selalu menonjol dimata orang” Lokal maupun International.</p>
+                </div>
+            </div>
+            <div class="destination-card" data-category="Popular,Recommend">
+                <img src="../../asset/hawaii.jpg" alt="Hawaii" />
+                <div class="info">
+                    <h3>Hawaii, US - Rp.200k</h3>
+                    <hr>
+                    <p>Tempat favorit semua orang, dimana Adat lokal disana unik & pemandangan yg sangat apik!</p>
+                </div>
+            </div>
+            <div class="destination-card" data-category="Recommend">
+                <img src="../../asset/padang.png" alt="Padang" />
+                <div class="info">
+                    <h3>Padang, ID - Rp.600k</h3>
+                    <hr>
+                    <p>Padang, tempat dimana makanan khas Terenak berasal & Tempat Turisme yg sangat Indah.</p>
+                </div>
+            </div>
+            <div class="destination-card" data-category="Recommend,Trending">
+                <img src="../../asset/lombok.jpg" alt="Lombok" />
+                <div class="info">
+                    <h3>Lombok, ID - Rp.500k</h3>
+                    <hr>
+                    <p>Lombok, dimana Sirkuit Mandalika terletak & Pantai terindah berada.</p>
+                </div>
+            </div>
+            <div class="destination-card" data-category="Trending,Popular">
+                <img src="../../asset/raja_ampat.jpg" alt="Raja Ampat" />
+                <div class="info">
+                    <h3>Raja Ampat, ID - Rp.1000k</h3>
+                    <hr>
+                    <p>Destinasi paling apik dengan pemandangan yang Indah, cocok sekali bagi anda yg ingin healing!</p>
+                </div>
+            </div>
+            <div class="destination-card" data-category="Popular,Trending">
+                <img src="../../asset/borneo.jpg" alt="Borneo" />
+                <div class="info">
+                    <h3>Borneo, ID - Rp.1200k</h3>
+                    <hr>
+                    <p>Tempat dimana seluruh satwa terlindungi berada, cocok utk Photo Hunting Satwa langka!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination" id="pagination"></div>
+    </div>
+
+    <div class="footer">
+        <div class="upper">
+            <div class="logoDesc">
+                <img src="../../asset/Logo.png" class="logo" />
+
+                <p>
+                    Kenyamanan & Keamanan adalah Prioritas Kami yg kami sediakan hanya untuk anda.
+                </p>
+            </div>
+
+            <div class="footMenu">
+                <div>
+                    <h2>Tentang</h2>
+                    <ul>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Kontak Kami</a></li>
+                        <li><a href="">Cara Booking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Produk</h2>
+                    <ul>
+                        <li><a href="">Destinasi</a></li>
+                        <li><a href="">Jadwal Terbang</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Social</h2>
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="bottom">
+            <a href="">Privacy Policy</a>
+            <p>Copyright ⓒ 2024 VsTravel</p>
+        </div>
+    </div>
+
+
+    <script>
+
+        //Utk pagination bekerja
+        const cardsPerPage = 3;
+        let currentPage = 1;
+        let activeCategory = 'All';
+
+        const allCards = Array.from(document.querySelectorAll('.destination-card'));
+        const paginationContainer = document.getElementById('pagination');
+        const filterButtons = document.querySelectorAll('.selectionButton button');
+
+        function getFilteredCards() {
+            if (activeCategory === 'All') return allCards;
+            return allCards.filter(card => {
+                const categories = card.dataset.category.split(',').map(cat => cat.trim());
+                return categories.includes(activeCategory);
+            });
+        }
+
+        function showPage(page) {
+            const filteredCards = getFilteredCards();
+            const start = (page - 1) * cardsPerPage;
+            const end = start + cardsPerPage;
+
+            allCards.forEach(card => card.style.display = 'none');
+            filteredCards.slice(start, end).forEach(card => card.style.display = 'block');
+
+            updatePagination(page, filteredCards.length);
+        }
+
+        function updatePagination(activePage, totalItems) {
+            const pageCount = Math.ceil(totalItems / cardsPerPage);
+            paginationContainer.innerHTML = '';
+
+            const createButton = (text, page, isActive = false) => {
+                const btn = document.createElement('button');
+                btn.textContent = text;
+                if (isActive) btn.classList.add('active');
+                btn.addEventListener('click', () => {
+                    currentPage = page;
+                    showPage(currentPage);
+                });
+                return btn;
+            };
+
+            if (activePage > 1) {
+                paginationContainer.appendChild(createButton('« Prev', activePage - 1));
+            }
+
+            for (let i = 1; i <= pageCount; i++) {
+                paginationContainer.appendChild(createButton(i, i, i === activePage));
+            }
+
+            if (activePage < pageCount) {
+                paginationContainer.appendChild(createButton('Next »', activePage + 1));
+            }
+        }
+
+        // Utk filtering bekerja
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                activeCategory = button.textContent;
+                currentPage = 1;
+                showPage(currentPage);
+            });
+        });
+
+        // Initial load
+        showPage(currentPage);
+
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("sideButton1").style.opacity = "100%";
+            document.getElementById("sideButton2").style.opacity = "100%";
+            document.getElementById("sideButton3").style.opacity = "100%";
+            document.getElementById("sideButton4").style.opacity = "100%";
+            document.getElementById("sideButton5").style.opacity = "100%";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("sideButton1").style.opacity = "0";
+            document.getElementById("sideButton2").style.opacity = "0";
+            document.getElementById("sideButton3").style.opacity = "0";
+            document.getElementById("sideButton4").style.opacity = "0";
+            document.getElementById("sideButton5").style.opacity = "0";
+        }
+    </script>
+
+</body>
+
+</html>
