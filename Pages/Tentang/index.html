@@ -10,6 +10,34 @@
 
 <body>
 
+    <header>
+        <img src="../../asset/Logo.png" alt="Logo" class="logo" />
+
+        <!-- Desktop / Tablet Navbar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="../Destinasi/index.html">Destinasi</a></li>
+                <li><a href="../TravelNow/index.html">Travel Now</a></li>
+                <li><a href="../Kontak/index.html">Kontak Kami</a></li>
+                <li><a href="../../index.html">Beranda</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="open-sidebar-btn" onclick="openSidebar()">☰</button>
+    </header>
+
+    <!-- Sidebar for Mobile -->
+    <!-- Sidebar (mobile only) -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+        <a id="sideButton1" href="../../index.html">Beranda</a>
+        <a id="sideButton2" href="../Destinasi/index.html">Destinasi</a>
+        <a id="sideButton3" href="../TravelNow/index.html">Travel Now</a>
+        <a id="sideButton4" href="../Kontak/index.html">Kontak Kami</a>
+        <a id="sideButton5" href="../Tentang/index.html">Tentang</a>
+    </div>
+
     <section class="hero">
         <div class="hero-overlay">
             <div class="hero-content">
@@ -25,6 +53,9 @@
         <div class="about-item">
             <img src="../../asset/about1.png" alt="Gambar Pantai" class="about-img left">
             <div class="about-text">
+                <h1>
+                    Apa itu VSTravel?
+                </h1>
                 <p>VSTravel adalah aplikasi Travel #1 di Indonesia dengan berbagai fitur yg ditawarkan dari mulai Tiket
                     pesawat yang selalu murah*, Scheduling yang sangat Flexible bisa diatur kapan saja, dan sistem
                     perhotelan yang gampang di pahami</p>
@@ -33,6 +64,7 @@
 
         <div class="about-item">
             <div class="about-text">
+                <h1>Awal cerita</h1>
                 <p>Ditemukan oleh seorang Penggila Travelling pada tahun 2011, VSTravel mengembangkannya ke penjuru
                     Indonesia, Malaysia, Filipina, Singapore, & Thailand. Perusahaan kami telah berkomitmen utk melayani
                     customer tanpa pamrih, dan selalu aktif buat melayani mereka.</p>
@@ -56,11 +88,6 @@
                 <p>199+</p>
             </div>
             <div class="produk-card">
-                <span class="icon">🧭</span>
-                <h3>Guidance Travel</h3>
-                <p>199+</p>
-            </div>
-            <div class="produk-card">
                 <span class="icon">🏨</span>
                 <h3>Akomodasi</h3>
                 <p>321+</p>
@@ -68,6 +95,154 @@
         </div>
     </section>
 
+
+    <div class="prioritas">
+
+        <div class="testimoni-header">
+            <button>
+                <img src="../../asset/left.png" />
+            </button>
+            <h2>Customer Happy Prioritas Kami</h2>
+            <button>
+                <img src="../../asset/right.png" />
+            </button>
+        </div>
+
+        <div class="testimoni-container">
+            <!-- Testimoni 1 -->
+            <div class="card">
+                <div class="profile">
+                    <img src="../../asset/avatar/bayuPraz.jpg" alt="Bayu">
+                    <div class="profile-info">
+                        <span class="name">Bayu Praz Manan</span>
+                        <span class="title">Vlogger sejati</span>
+                    </div>
+                </div>
+                <div class="rating">4.5</div>
+                <p class="desc">
+                    Pakai VSTravel benar² Gampang cuyy, tinggal klik-klik-klik selesai dah booking, langsung shoosh ke
+                    Jepang ya gak ya wkwk, Terbaik dahh pokoknyaa! ✈️🎉
+                </p>
+            </div>
+
+            <!-- Testimoni 2 -->
+            <div class="card">
+                <div class="profile">
+                    <img src="../../asset/avatar/Agus.jpg" alt="Agus">
+                    <div class="profile-info">
+                        <span class="name">Agus Diponogoro</span>
+                        <span class="title">Traveller sejati</span>
+                    </div>
+                </div>
+                <div class="rating">4.0</div>
+                <p class="desc">
+                    Dulu suka bingung kalau mau pesan tiket pesawat, tapi sejak kenal VSTravel, semuanya jadi super
+                    praktis! Tinggal klik-klik aja, booking langsung selesai. Udah gitu prosesnya cepet banget lagi!
+                    Bener-bener recommended! 🎉✈️
+                </p>
+            </div>
+
+            <!-- Testimoni 3 -->
+            <div class="card">
+                <div class="profile">
+                    <img src="../../asset/avatar/missBule.jpg" alt="Miss Bule">
+                    <div class="profile-info">
+                        <span class="name">Miss Bule</span>
+                        <span class="title">Youtuber</span>
+                    </div>
+                </div>
+                <div class="rating">4.9</div>
+                <p class="desc">
+                    Pertama kali coba VSTravel dan langsung jatuh cinta! Proses bookingnya super gampang, tinggal
+                    klik-klik doang, gak pake ribet! Udah gitu cepet banget, langsung dapet tiketnya! Pokoknya top
+                    banget buat yang suka jalan-jalan! 🎊🎉
+                </p>
+            </div>
+
+            <!-- Testimoni 4 -->
+            <div class="card">
+                <div class="profile">
+                    <img src="../../asset/avatar/nikkei.jpg" alt="Nikkei">
+                    <div class="profile-info">
+                        <span class="name">Nikkei Lim</span>
+                        <span class="title">Penyanyi Global</span>
+                    </div>
+                </div>
+                <div class="rating">4.3</div>
+                <p class="desc">
+                    Tur dunia itu seru, tapi urusan tiket bisa jadi PR besar kalau nggak pakai yang praktis. Untung ada
+                    VSTravel! Booking tiketnya gampang banget, tinggal klik-klik, langsung terbang. Bener-bener
+                    lifesaver buat musisi yang sibuk kayak aku! 🎤✈️
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+        <div class="upper">
+            <div class="logoDesc">
+                <img src="../../asset/Logo.png" class="logo" />
+
+                <p>
+                    Kenyamanan & Keamanan adalah Prioritas Kami yg kami sediakan hanya untuk anda.
+                </p>
+            </div>
+
+            <div class="footMenu">
+                <div>
+                    <h2>Tentang</h2>
+                    <ul>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Kontak Kami</a></li>
+                        <li><a href="">Cara Booking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Produk</h2>
+                    <ul>
+                        <li><a href="">Destinasi</a></li>
+                        <li><a href="">Jadwal Terbang</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Social</h2>
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="bottom">
+            <a href="">Privacy Policy</a>
+            <p>Copyright ⓒ 2024 VsTravel</p>
+        </div>
+    </div>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("sideButton1").style.opacity = "100%";
+            document.getElementById("sideButton2").style.opacity = "100%";
+            document.getElementById("sideButton3").style.opacity = "100%";
+            document.getElementById("sideButton4").style.opacity = "100%";
+            document.getElementById("sideButton5").style.opacity = "100%";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("sideButton1").style.opacity = "0";
+            document.getElementById("sideButton2").style.opacity = "0";
+            document.getElementById("sideButton3").style.opacity = "0";
+            document.getElementById("sideButton4").style.opacity = "0";
+            document.getElementById("sideButton5").style.opacity = "0";
+        }
+    </script>
 
 </body>
 

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Travel - Pesan Tiket Travel Anda</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="../../asset/Logo.png" alt="Logo" class="logo" />
+
+        <!-- Desktop / Tablet Navbar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="../Destinasi/index.html">Destinasi</a></li>
+                <li><a href="../TravelNow/index.html">Travel Now</a></li>
+                <li><a href="../../index.html">Beranda</a></li>
+                <li><a href="../Tentang/index.html">Tentang</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="open-sidebar-btn" onclick="openSidebar()">☰</button>
+    </header>
+
+    <!-- Sidebar for Mobile -->
+    <!-- Sidebar (mobile only) -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+        <a id="sideButton1" href="../../index.html">Beranda</a>
+        <a id="sideButton2" href="../Destinasi/index.html">Destinasi</a>
+        <a id="sideButton3" href="../TravelNow/index.html">Travel Now</a>
+        <a id="sideButton4" href="../Kontak/index.html">Kontak Kami</a>
+        <a id="sideButton5" href="../Tentang/index.html">Tentang</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="travel-form-container">
+                <div class="sidebarForm">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/travelNo2-4NBUdd1oUEcpA4bjUdOvo29XT6uo55.png"
+                        alt="Travel illustration with airplane and trees" class="sidebar-image">
+                </div>
+
+
+                <div class="travel-form">
+                    <h2>Kemana kamu berencana untuk pergi?</h2>
+
+                    <div class="form-group">
+                        <input type="text" id="tempat" placeholder="Tempat/Kota">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="dari" placeholder="Dari Bandara">
+                    </div>
+
+                    <h3>Kapan ?</h3>
+
+                    <div class="date-inputs">
+                        <div class="form-group">
+                            <div class="date-input">
+                                <input type="text" id="tanggal-berangkat" placeholder="Tanggal Berangkat">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="date-input">
+                                <input type="text" id="tanggal-kembali" placeholder="Tanggal Kembali">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Berapa banyak orang?</h3>
+
+                    <div class="passenger-inputs">
+                        <div class="form-group">
+                            <input type="number" id="jumlah-penumpang" placeholder="Jumlah penumpang" min="1">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="number" id="dewasa" placeholder="Dewasa (18+)" min="0">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="number" id="anak" placeholder="Anak-Anak (0-17)" min="0">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-kirim">Kirim</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../../asset/Logo.png" class="logo"/>
+                    <p>Kenyamanan & Keamanan adalah Prioritas Kami yg kami sediakan hanya untuk anda.</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Tentang</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Kontak Kami</a></li>
+                            <li><a href="#">Cara Booking</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Produk</h3>
+                        <ul>
+                            <li><a href="#">Destinasi</a></li>
+                            <li><a href="#">Jadwal Terbang</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Social</h3>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="privacy-policy"><a href="#">Privacy Policy</a></p>
+                <p class="copyright">Copyright © 2024 BeeJoys</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple date picker functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const dateInputs = document.querySelectorAll('#tanggal-berangkat, #tanggal-kembali');
+
+            dateInputs.forEach(input => {
+                input.addEventListener('focus', function () {
+                    this.type = 'date';
+                });
+
+                input.addEventListener('blur', function () {
+                    if (!this.value) {
+                        this.type = 'text';
+                    }
+                });
+            });
+        });
+
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("sideButton1").style.opacity = "100%";
+            document.getElementById("sideButton2").style.opacity = "100%";
+            document.getElementById("sideButton3").style.opacity = "100%";
+            document.getElementById("sideButton4").style.opacity = "100%";
+            document.getElementById("sideButton5").style.opacity = "100%";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("sideButton1").style.opacity = "0";
+            document.getElementById("sideButton2").style.opacity = "0";
+            document.getElementById("sideButton3").style.opacity = "0";
+            document.getElementById("sideButton4").style.opacity = "0";
+            document.getElementById("sideButton5").style.opacity = "0";
+        }
+    </script>
+</body>
+
+</html>

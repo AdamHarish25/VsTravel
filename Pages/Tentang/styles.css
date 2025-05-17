@@ -13,7 +13,6 @@ body {
 }
 
 
-
 .hero-overlay {
     background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
@@ -26,13 +25,23 @@ body {
 .hero-content {
     color: white;
     padding: 2rem;
-    max-width: 800px;
+    max-width: 1000px;
+    text-align: center;
+    display: flex;
+    gap: -10px;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
 }
 
 .hero-content h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
+}
+
+.hero-content p{
+    max-width: 800px;
 }
 
 .about {
@@ -43,13 +52,14 @@ body {
     background-color: white;
     border-radius: 200px 200px 0 0;
     padding: 3rem 1.5rem;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
 }
 
 .about-item {
     display: flex;
     flex-direction: row;
+    gap: 40px;
     align-items: center;
     margin-bottom: 3rem;
 }
@@ -61,7 +71,7 @@ body {
 .about-img {
     width: 50%;
     border-radius: 1rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
     margin-right: 2rem;
 }
 
@@ -125,3 +135,443 @@ body {
     font-size: 1.2rem;
     color: #1dbf73;
 }
+
+
+.prioritas {
+    background: #fff;
+    padding: 40px;
+    color: #333;
+}
+
+.prioritas>*+* {
+    margin-top: 60px;
+}
+
+.testimoni-header h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.testimoni-header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+.testimoni-header button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.testimoni-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.title {
+    font-size: 0.85em;
+    color: #777;
+}
+
+.rating {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #f90;
+}
+
+.rating::before {
+    content: '★';
+    margin-right: 5px;
+}
+
+.desc {
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.footer {
+    background-color: #42d787;
+    width: auto;
+    height: fit-content;
+    padding: 50px;
+    color: white;
+}
+
+.upper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    place-items: center;
+}
+
+.logoDesc {
+    width: 50%;
+}
+
+.upper ul {
+    list-style: none;
+    text-align: start;
+    margin: 0;
+    padding: 0;
+
+}
+
+.upper ul>*+* {
+    margin-top: 10px;
+}
+
+.footMenu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.footMenu div>*+* {
+    margin-top: 10px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.footer>*+* {
+    margin-top: 30px;
+}
+
+.footer hr {
+    color: white;
+}
+
+.bottom {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+
+
+@media screen and (max-width: 1280px){
+    .prioritas {
+        padding: 20px;
+    }
+
+    .prioritas>.testimoni-header {
+        padding: 0;
+    }
+
+    .testimoni-header {
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        display: grid;
+        place-content: center;
+    }
+
+    .testimoni-header h2 {
+        font-size: 18px;
+        margin-bottom: 0;
+        text-align: center;
+        width: 100vw;
+
+    }
+
+    .testimoni-header button {
+        display: none;
+        width: 0;
+    }
+
+    .upper {
+        grid-template-columns: 1fr;
+        place-items: start;
+        gap: 30px;
+    }
+
+    .footMenu {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .bottom {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .logoDesc p {
+        width: 300px;
+    }
+
+    .about{
+        max-width: fit-content;
+        height: fit-content;
+    }
+
+    .hero-content h1{
+        font-size: 2.5rem;
+    }
+   
+}
+
+@media screen and (max-width: 740px) {
+    .testimoni-container {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+     header>* {
+        z-index: 2;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 60px;
+        right: -70%;
+        background-color: #42d787;
+        width: 98vw;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        transition: all 2ms;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+        /* width: 90vw; */
+        transition: all 2ms;
+    }
+
+     .about-item{
+        flex-direction: column-reverse;
+        
+    }
+
+    .about-img {
+        width: 80%;
+    }
+
+    .hero-content h1{
+        font-size: 2rem;
+    }
+    
+    
+
+}
+
+@media screen and (min-width: 769px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 15px 0;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .navbar a:hover {
+        text-decoration: underline;
+    }
+}
+
+.sidebar,
+.open-sidebar-btn {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .footMenu {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: 30px 20px;
+        margin-top: 20px;
+    }
+
+    .bottom {
+        place-items: center;
+        text-align: center;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .open-sidebar-btn {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        background-color: #42d787;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 100%;
+        border: none;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .sidebar {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.95);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        text-align: center;
+    }
+
+    .sidebar a {
+        padding: 8px 8px 20px 8px;
+        text-decoration: none;
+        font-size: 30px;
+        color: #f1f1f1;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+        text-decoration: underline;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 15px;
+        left: 35px;
+        font-size: 40px;
+    }
+
+    #main-content {
+        transition: margin-left 0.5s;
+        padding: 20px;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.logo {
+    width: 170px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    background-color: #42d787;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header>* {
+    z-index: 2;
+}
+
