@@ -20,8 +20,8 @@
         <nav class="navbar">
             <ul>
                 <li><a href="../Destinasi/index.html">Destinasi</a></li>
-                <li><a href="../TravelNow/index.html">Travel Now</a></li>
                 <li><a href="../../index.html">Beranda</a></li>
+                <li><a href="../Kontak/index.html">Kontak</a></li>
                 <li><a href="../Tentang/index.html">Tentang</a></li>
             </ul>
         </nav>
@@ -44,26 +44,76 @@
     <!-- Main Content -->
     <main>
         <div class="container">
+
+            <section class="benefits-section">
+                <h2>Keuntungan Bepergian Bersama VS Travel</h2>
+                <div class="benefits-container">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Keamanan Terjamin</h3>
+                        <p>Semua perjalanan kami dilengkapi dengan protokol keamanan yang ketat dan asuransi perjalanan.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>Harga Terbaik</h3>
+                        <p>Kami menawarkan harga yang kompetitif dengan jaminan kualitas layanan terbaik.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Layanan 24/7</h3>
+                        <p>Tim dukungan pelanggan kami siap membantu Anda kapan saja dan di mana saja.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Banyak Destinasi</h3>
+                        <p>Pilihan destinasi yang beragam untuk memenuhi kebutuhan liburan Anda.</p>
+                    </div>
+                </div>
+            </section>
+
             <div class="travel-form-container">
                 <div class="sidebarForm">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/travelNo2-4NBUdd1oUEcpA4bjUdOvo29XT6uo55.png"
+                    <img src="../../asset/travelNow.png"
                         alt="Travel illustration with airplane and trees" class="sidebar-image">
                 </div>
 
 
                 <div class="travel-form">
                     <h2>Kemana kamu berencana untuk pergi?</h2>
-
+                    
+                    <!-- Personal Information -->
+                    <h3>Informasi Pribadi</h3>
+                    <div class="form-group">
+                        <input type="text" id="nama-lengkap" placeholder="Nama Lengkap">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="nomor-telepon" placeholder="Nomor Telepon">
+                    </div>
+                    
+                    <!-- Destination Information -->
+                    <h3>Informasi Tujuan</h3>
                     <div class="form-group">
                         <input type="text" id="tempat" placeholder="Tempat/Kota">
                     </div>
-
+                    
                     <div class="form-group">
                         <input type="text" id="dari" placeholder="Dari Bandara">
                     </div>
-
+                    
                     <h3>Kapan ?</h3>
-
+                    
                     <div class="date-inputs">
                         <div class="form-group">
                             <div class="date-input">
@@ -71,7 +121,7 @@
                                 <i class="fas fa-calendar-alt"></i>
                             </div>
                         </div>
-
+                        
                         <div class="form-group">
                             <div class="date-input">
                                 <input type="text" id="tanggal-kembali" placeholder="Tanggal Kembali">
@@ -79,24 +129,54 @@
                             </div>
                         </div>
                     </div>
-
+                    
                     <h3>Berapa banyak orang?</h3>
-
+                    
                     <div class="passenger-inputs">
                         <div class="form-group">
                             <input type="number" id="jumlah-penumpang" placeholder="Jumlah penumpang" min="1">
                         </div>
-
+                        
                         <div class="form-group">
                             <input type="number" id="dewasa" placeholder="Dewasa (18+)" min="0">
                         </div>
-
+                        
                         <div class="form-group">
                             <input type="number" id="anak" placeholder="Anak-Anak (0-17)" min="0">
                         </div>
                     </div>
-
-                    <button type="submit" class="btn-kirim">Kirim</button>
+                    
+                    <!-- Additional Preferences (Checkbox component) -->
+                    <h3>Preferensi Tambahan</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="asuransi">
+                            <span class="checkmark"></span>
+                            Tambahkan Asuransi Perjalanan
+                        </label>
+                        
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="makanan-khusus">
+                            <span class="checkmark"></span>
+                            Permintaan Makanan Khusus
+                        </label>
+                    </div>
+                    
+                    <!-- Select/Dropdown component -->
+                    <h3>Kelas Penerbangan</h3>
+                    <div class="form-group">
+                        <select id="kelas-penerbangan">
+                            <option value="">Pilih Kelas Penerbangan</option>
+                            <option value="ekonomi">Ekonomi</option>
+                            <option value="bisnis">Bisnis</option>
+                            <option value="first">First Class</option>
+                        </select>
+                    </div>
+                    
+                    <button type="button" class="btn-kirim">Kirim</button>
+                    
+                    <!-- Error container will be inserted here by JavaScript -->
+                    <div id="error-container" class="error"></div>
                 </div>
             </div>
         </div>
@@ -182,6 +262,8 @@
             document.getElementById("sideButton5").style.opacity = "0";
         }
     </script>
+
+    <script src="validation.js"></script>
 </body>
 
 </html>

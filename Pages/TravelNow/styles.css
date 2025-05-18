@@ -59,13 +59,67 @@ nav ul li a {
   font-weight: bold;
 }
 
-header>* {
+header > * {
   z-index: 2;
 }
 
 .sidebar,
 .open-sidebar-btn {
   display: none;
+}
+
+/* Benefits Section - NEW */
+.benefits-section {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.benefits-section h2 {
+  color: #42d787;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.benefits-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.benefit-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  width: calc(25% - 30px);
+  min-width: 220px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+  font-size: 36px;
+  color: #42d787;
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.benefit-card p {
+  color: #666;
+  font-size: 14px;
 }
 
 /* Main Content Styles */
@@ -85,7 +139,7 @@ main {
 /* Sidebar with Image */
 .sidebarForm {
   width: 220px;
-  background-color: #2ecc71;
+  background-color: #42D787;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -96,7 +150,7 @@ main {
 .sidebar-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   display: block;
 }
@@ -125,7 +179,8 @@ main {
   margin-bottom: 15px;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
   width: 100%;
   padding: 12px 15px;
   border: 1px solid #ddd;
@@ -133,9 +188,11 @@ main {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   transition: border-color 0.3s;
+  background-color: white;
 }
 
-.form-group input:focus {
+.form-group input:focus,
+.form-group select:focus {
   outline: none;
   border-color: #2ecc71;
 }
@@ -161,6 +218,68 @@ main {
   top: 50%;
   transform: translateY(-50%);
   color: #999;
+}
+
+/* Checkbox styles - NEW */
+.checkbox-group {
+  margin-bottom: 20px;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2ecc71;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .btn-kirim {
@@ -265,12 +384,18 @@ footer {
   .navbar a:hover {
     text-decoration: underline;
   }
-
 }
-
 
 /* Responsive Styles */
 @media (max-width: 992px) {
+  .benefits-container {
+    gap: 20px;
+  }
+
+  .benefit-card {
+    width: calc(50% - 20px);
+  }
+
   .footer-content {
     flex-direction: column;
     gap: 30px;
@@ -282,19 +407,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  /* header .container {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  nav ul {
-    justify-content: center;
-  }
-
-  nav ul li {
-    margin: 0 15px;
-  } */
-
   .travel-form-container {
     flex-direction: column;
   }
@@ -305,6 +417,7 @@ footer {
   }
 
   .sidebar-image {
+    object-fit: cover;
     object-position: center;
   }
 
@@ -383,6 +496,15 @@ footer {
     font-size: 40px;
   }
 
+  .benefits-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit-card {
+    width: 100%;
+    max-width: 400px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -393,4 +515,48 @@ footer {
   nav ul li {
     margin: 5px 10px;
   }
+
+  .benefit-card {
+    padding: 20px 15px;
+  }
+}
+
+/* Error styling */
+.error-input {
+  border-color: #e74c3c !important;
+  background-color: rgba(231, 76, 60, 0.05);
+}
+
+#error-container {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  display: none;
+  font-weight: 500;
+}
+
+#error-container.error {
+  background-color: #ffebee;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+}
+
+#error-container.success {
+  background-color: #e8f5e9;
+  border: 1px solid #2ecc71;
+  color: #2ecc71;
+}
+
+#error-container ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+#error-container ul li {
+  margin-bottom: 5px;
+  list-style-type: disc;
+}
+
+#error-container ul li:last-child {
+  margin-bottom: 0;
 }
